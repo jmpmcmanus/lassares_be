@@ -1,0 +1,10 @@
+django
+djangorestframework
+djangorestframework-gis
+django-cors-headers
+markdown
+django-filter
+packaging
+psycopg2
+pyparsing
+six
