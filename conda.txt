@@ -1,0 +1,6 @@
+conda env remove -n lassares
+conda create -n lassares python=3.7
+conda activate lassares
+conda deactivate
+conda install gdal
+pip install -r requirements.txt
