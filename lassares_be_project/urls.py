@@ -20,6 +20,7 @@ from lassares_be_app import views
 
 router = routers.DefaultRouter()
 router.register(r'fdr_18001_0_11_Model', views.fdr_18001_0_11_View)
+router.register(r'testdata_Model', views.testdata_View)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
