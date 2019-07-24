@@ -18,7 +18,7 @@ class fdr_18001_0_11_Model(models.Model):
 
 
 class testdata_Model(models.Model):
-    ogc_fid = models.IntegerField(5,primary_key=True)
+    ogc_fid = models.IntegerField(primary_key=True)
     wkb_geometry = models.PointField(null=False)
     device_id = models.TextField(10,null=False)
     timestamp = models.DateTimeField(null=False)
