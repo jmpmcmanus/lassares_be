@@ -41,17 +41,25 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_gis',
+    'django_filters',
+    'rest_framework_filters',
     'lassares_be_app.apps.LassaresBeAppConfig',
 ]
 
 REST_FRAMEWORK = {
-   'DEFAULT_RENDERER_CLASSES': (
+   'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
-   ),
+   ],
+   'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+   ],
+   'DEFAULT_FILTER_BACKENDS': [
+        'rest_framework_filters.backends.ComplexFilterBackend',
+   ],
    'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+   ]
 }
 
 MIDDLEWARE = [

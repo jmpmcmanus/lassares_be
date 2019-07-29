@@ -16,7 +16,6 @@ class fdr_18001_0_11_Model(models.Model):
                  )
     service_date = models.CharField('Date Choice', choices=DATE_CHOICE,  max_length=10, null=False)
 
-
 class testdata_Model(models.Model):
     ogc_fid = models.IntegerField(primary_key=True)
     wkb_geometry = models.PointField(null=False)

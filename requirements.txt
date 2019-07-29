@@ -1,9 +1,10 @@
-django
-djangorestframework
-djangorestframework-gis
+django==2.2.3
+djangorestframework==3.8
+djangorestframework-gis==0.14.0
+django-filter==2.2
+djangorestframework-filters
 django-cors-headers
 markdown
-django-filter
 packaging
 psycopg2
 pyparsing
