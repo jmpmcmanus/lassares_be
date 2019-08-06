@@ -13,3 +13,4 @@ class testdata_View(viewsets.ModelViewSet):
     queryset = testdata_Model.objects.all()
     serializer_class = testdata_Serializer
     filter_class = TestdataFilter
+
