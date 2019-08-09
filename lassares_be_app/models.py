@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-#from django.db import models
+from django.db import models as omodels
 
 # Create your models here.
 class fdr_18001_0_11_Model(models.Model):
@@ -30,3 +30,31 @@ class testdata_Model(models.Model):
     air_pressu = models.IntegerField(null=False)
     wind_speed = models.IntegerField(null=False)
     wind_direc = models.IntegerField(null=False)
+
+class testdatav_Model(omodels.Model):
+    id = models.IntegerField(primary_key=True)
+    device_id = models.TextField(10,null=False)
+    timestamp = models.DateTimeField(null=False)
+    job_id = models.TextField(10,null=False)
+    chem_id = models.TextField(10,null=False)
+
+    class Meta:
+        managed = False
+        db_table = "lassares_be_app_testdatav_model"
+
+class timestamp_Model(omodels.Model):
+    id = models.DateTimeField(null=False,primary_key=True)
+    label = models.DateTimeField(null=False)
+
+    class Meta:
+        managed = False
+        db_table = "lassares_be_app_timestamp_model"
+
+class jobid_Model(omodels.Model):
+    id = models.TextField(10,null=False,primary_key=True)
+    label = models.TextField(10,null=False)
+
+    class Meta:
+        managed = False
+        db_table = "lassares_be_app_jobid_model"
+

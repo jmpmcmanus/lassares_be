@@ -1,0 +1,2 @@
+psql -U jmcmanus -d lassares -a -f createviews.sql
+
