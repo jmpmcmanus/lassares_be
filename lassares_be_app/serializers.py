@@ -7,16 +7,16 @@ from drf_queryfields import QueryFieldsMixin
 class fdr_18001_0_11_Serializer(GeoFeatureModelSerializer):
     class Meta:
         model = fdr_18001_0_11_Model
-        geo_field = 'wkb_geometry'
-        id_field = 'ogc_fid'
-        fields = ('ogc_fid', 'title', 'powerline', 'voltage', 'service_date')
+        geo_field = 'geometry'
+        id_field = 'fid'
+        fields = ('fid', 'title', 'powerline', 'voltage', 'service_date')
 
 class testdata_Serializer(QueryFieldsMixin, GeoFeatureModelSerializer):
     class Meta:
         model = testdata_Model
-        geo_field = 'wkb_geometry'
-        id_field = 'ogc_fid'
-        fields = ('ogc_fid', 'device_id', 'timestamp', 'job_id', 'concentrat', 'chem_id',
+        geo_field = 'geometry'
+        id_field = 'fid'
+        fields = ('fid', 'device_id', 'timestamp', 'job_id', 'concentrat', 'chem_id',
                   'amb_temp', 'rel_humid', 'precip', 'air_pressu', 'wind_speed', 'wind_direc')
 
 class testdatav_Serializer(QueryFieldsMixin, ModelSerializer):

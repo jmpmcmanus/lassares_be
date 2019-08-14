@@ -3,8 +3,8 @@ from django.db import models as omodels
 
 # Create your models here.
 class fdr_18001_0_11_Model(models.Model):
-    ogc_fid = models.IntegerField(primary_key=True)
-    wkb_geometry = models.MultiLineStringField(null=False)
+    fid = models.IntegerField(primary_key=True)
+    geometry = models.MultiLineStringField(null=False)
     title = models.TextField(20,null=False)
     powerline = models.TextField(50,null=False)
     voltage = models.IntegerField(null=False)
@@ -17,8 +17,8 @@ class fdr_18001_0_11_Model(models.Model):
     service_date = models.CharField('Date Choice', choices=DATE_CHOICE,  max_length=10, null=False)
 
 class testdata_Model(models.Model):
-    ogc_fid = models.IntegerField(primary_key=True)
-    wkb_geometry = models.PointField(null=False)
+    fid = models.IntegerField(primary_key=True)
+    geometry = models.PointField(null=False)
     device_id = models.TextField(10,null=False)
     timestamp = models.DateTimeField(null=False)
     job_id = models.TextField(10,null=False)
